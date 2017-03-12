@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[redis使用]]></title>
+      <url>%2F2017%2F03%2F12%2Fredis%2F</url>
+      <content type="text"><![CDATA[redis的下载安装(windows版)可以到redis的github上下载redis最新的发布版,github路径https://github.com/MSOpenTech/redis我的百度网盘中有Redis-x64-3.2.100.msi安装过程和普通软件的安装一样,记住redis的默认端口是6379,也可以在安装的过程中修改 redis的密码配置redis默认是没有密码的,这样会有很大的安全风险，所以需要配置密码，密码的配置也非常简单，在redis的安装目录下找到文件redis.windows-service.conf，搜索requirepass,#requirepass foobared将注释去掉，就开启了密码验证，密码就是后面的字符串foobared，然后将密码修改成我们自己的即可 redis服务的开启在cmd中进入redis的安装目录，然后执行命令开启redis服务：redis-server redis.windows.conf看到下图即成功开启了redis服务然后新开一个cmd，进入redis安装目录，执行命令redis-cli -h 127.0.0.1 -p 6379 -a your password登陆成功，即可执行redis的操作 redis中的数据结构]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[hexo使用]]></title>
       <url>%2F2017%2F03%2F12%2Findex%2F</url>
-      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2]]></content>
+      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2 如果文章过长，首页全部显示不美观，可以在文章中添加 &lt;!--more--&gt;手工截断文章， 则首页仅显示该标签的上面的内容， 只有点阅读全文，才显示文章全部内容]]></content>
     </entry>
 
     
