@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[HotSpot VM垃圾回收问题]]></title>
       <url>%2F2017%2F03%2F13%2Fjvm%2F</url>
-      <content type="text"><![CDATA[123456public void getRowData() &#123;User u=new User();//1System.out.println(u);//2Person p=new Person();// 3System.out.println(p);//4&#125; 如果程序执行到第三行的时候，JVM开始垃圾回收，问User对象u可能被回收吗？1234567public void getRowData() &#123;User u=new User();//1System.out.println(u);//2u=null;Person p=new Person();// 3System.out.println(p);//4&#125; 如果这样呢？给自己留的问题]]></content>
+      <content type="text"><![CDATA[123456public void getRowData() &#123;User u=new User();//1System.out.println(u);//2Person p=new Person();// 3System.out.println(p);//4&#125; 如果程序执行到第三行的时候，JVM开始垃圾回收，问User对象u可能被回收吗？1234567public void getRowData() &#123;User u=new User();//1System.out.println(u);//2u=null;Person p=new Person();// 3System.out.println(p);//4&#125; 如果这样呢？给自己留的问题贴吧讨论http://tieba.baidu.com/p/5019938125]]></content>
     </entry>
 
     

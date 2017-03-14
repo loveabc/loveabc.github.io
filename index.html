@@ -398,7 +398,7 @@
           
             <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public void getRowData() &#123;</div><div class="line">User u=new User();//1</div><div class="line">System.out.println(u);//2</div><div class="line">Person p=new Person();// 3</div><div class="line">System.out.println(p);//4</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果程序执行到第三行的时候，JVM开始垃圾回收，问User对象u可能被回收吗？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public void getRowData() &#123;</div><div class="line">User u=new User();//1</div><div class="line">System.out.println(u);//2</div><div class="line">u=null;</div><div class="line">Person p=new Person();// 3</div><div class="line">System.out.println(p);//4</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>如果这样呢？给自己留的问题</p>
+<p>如果这样呢？给自己留的问题<br><br>贴吧讨论<a href="http://tieba.baidu.com/p/5019938125" target="_blank" rel="external">http://tieba.baidu.com/p/5019938125</a></p>
 
           
         
@@ -540,7 +540,7 @@
           <h1 id="redis的下载安装-windows版"><a href="#redis的下载安装-windows版" class="headerlink" title="redis的下载安装(windows版)"></a>redis的下载安装(windows版)</h1><p>可以到redis的github上下载redis最新的发布版,github路径<br><a href="https://github.com/MSOpenTech/redis">https://github.com/MSOpenTech/redis</a><br/><br>我的百度网盘中有Redis-x64-3.2.100.msi<br><br/><br>安装过程和普通软件的安装一样,记住redis的默认端口是6379,<br>也可以在安装的过程中修改<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/12/redis/#далее" rel="contents">
+            <a class="btn" href="/2017/03/12/redis/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
