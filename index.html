@@ -297,6 +297,153 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/docker学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="loveabc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="loveabc">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/23/docker学习笔记/" itemprop="url">
+                  docker学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T18:42:53+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>什么是docker?百度之<br>docker的安装(ubuntu)<br>apt-get install docker.io  安装linux自带的docker<br>apt-get install <a href="http://www.docker.com|sh" target="_blank" rel="external">http://www.docker.com|sh</a> 安装最新的docker</p>
+<p>docker version  查看安装的docker，如果既有client又有server，说明安装启动成功<br>service start/stop/restart docker  启动/停止/重启docker服务<br>docker pull [options] name [:tag] 从docker远程仓库拉取镜像<br>ex：docker pull hello-world  从docker hub上拉取hello-world镜像<br>docker images [options] [repository] [:tag]  查看本机已经存在的镜像</p>
+<p>docker run [options] images [:tag] [command] [arg]  运行镜像<br>docker ps 查询正在运行的docker镜像<br>-d 后台运行<br>ex：docker run -d nginx  在后台运行nginx服务<br>docker  stop image 停止指定的镜像<br>docker stop 86f</p>
+<p>docker exec [options] imagesID bash 进入容器内部，在容器内部可执行命令<br>ex：docker exec -it 86f67a bash  新开一个终端，进入容器内部，在容器内部可执行命令<br>exit退出容器</p>
+<p>docker网络<br>docker的网络类型有brige（虚拟出自己的网卡），Host（和主机共用网卡），None（没有网络，容器不能和外界有任何网络联系）<br>默认是bridge模式，使用bridge模式，需要端口映射，将主机的端口与镜像的端口进行映射，这样访问主机的指定端口就会访问镜像上的指定端口的服务</p>
+<p>docker  run -d -p  主机端口：容器端口  image<br>ex：docker run -d -p 9999:80  hello-world   将容器的80端口映射到主机的9999端口<br>docker run -d -P iamge  将容器的端口映射到随机端口上<br>ex： docker -d -P hello-world</p>
+<p>根据image id删除镜像<br>docker rmi imageID</p>
+<p>制作自己的镜像：<br>dockerfile：描述怎么制作自己的镜像<br>docker build：执行dockerfile中每一步描述的事情<br>ex：<br>dockerfile文件<br>from hub.c.163.com/library/tomcat       //指定需要继承的镜像<br>MAINTAINER wenqaunzhang youth_fly@163.com    //镜像所有者信息<br>COPY springmvc.war /usr/local/tomcat/webapps        //把需要放到镜像的文件复制到指定路径<br>docker build -t springmvc:0.0.1 .    //创建镜像  -t  镜像的名称和标签    dockerfile文件的路径，当前路径使用  .    </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/diandian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -933,7 +1080,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -944,7 +1091,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -955,7 +1102,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

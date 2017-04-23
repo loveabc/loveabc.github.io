@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[docker学习笔记]]></title>
+      <url>%2F2017%2F04%2F23%2Fdocker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+      <content type="text"><![CDATA[什么是docker?百度之docker的安装(ubuntu)apt-get install docker.io 安装linux自带的dockerapt-get install http://www.docker.com|sh 安装最新的docker docker version 查看安装的docker，如果既有client又有server，说明安装启动成功service start/stop/restart docker 启动/停止/重启docker服务docker pull [options] name [:tag] 从docker远程仓库拉取镜像ex：docker pull hello-world 从docker hub上拉取hello-world镜像docker images [options] [repository] [:tag] 查看本机已经存在的镜像 docker run [options] images [:tag] [command] [arg] 运行镜像docker ps 查询正在运行的docker镜像-d 后台运行ex：docker run -d nginx 在后台运行nginx服务docker stop image 停止指定的镜像docker stop 86f docker exec [options] imagesID bash 进入容器内部，在容器内部可执行命令ex：docker exec -it 86f67a bash 新开一个终端，进入容器内部，在容器内部可执行命令exit退出容器 docker网络docker的网络类型有brige（虚拟出自己的网卡），Host（和主机共用网卡），None（没有网络，容器不能和外界有任何网络联系）默认是bridge模式，使用bridge模式，需要端口映射，将主机的端口与镜像的端口进行映射，这样访问主机的指定端口就会访问镜像上的指定端口的服务 docker run -d -p 主机端口：容器端口 imageex：docker run -d -p 9999:80 hello-world 将容器的80端口映射到主机的9999端口docker run -d -P iamge 将容器的端口映射到随机端口上ex： docker -d -P hello-world 根据image id删除镜像docker rmi imageID 制作自己的镜像：dockerfile：描述怎么制作自己的镜像docker build：执行dockerfile中每一步描述的事情ex：dockerfile文件from hub.c.163.com/library/tomcat //指定需要继承的镜像MAINTAINER wenqaunzhang youth_fly@163.com //镜像所有者信息COPY springmvc.war /usr/local/tomcat/webapps //把需要放到镜像的文件复制到指定路径docker build -t springmvc:0.0.1 . //创建镜像 -t 镜像的名称和标签 dockerfile文件的路径，当前路径使用 .]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[diandian]]></title>
       <url>%2F2017%2F03%2F16%2Fdiandian%2F</url>
       <content type="text"><![CDATA[点点滴滴积累使用get提交数据到服务器,使用中不能带有#，原因：浏览器会把#后面的内容作为网页的锚点，导致传递到后台的数据缺失]]></content>

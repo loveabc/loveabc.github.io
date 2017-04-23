@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="redis," />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -87,18 +87,19 @@
 
 
 
-<meta name="description" content="redis的下载安装(windows版)可以到redis的github上下载redis最新的发布版,github路径https://github.com/MSOpenTech/redis我的百度网盘中有Redis-x64-3.2.100.msi安装过程和普通软件的安装一样,记住redis的默认端口是6379,也可以在安装的过程中修改">
+<meta name="description" content="什么是docker?百度之docker的安装(ubuntu)apt-get install docker.io  安装linux自带的dockerapt-get install http://www.docker.com|sh 安装最新的docker
+docker version  查看安装的docker，如果既有client又有server，说明安装启动成功service start/stop/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis使用">
-<meta property="og:url" content="http://yoursite.com/2017/03/12/redis/index.html">
+<meta property="og:title" content="docker学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/04/23/docker学习笔记/index.html">
 <meta property="og:site_name" content="loveabc">
-<meta property="og:description" content="redis的下载安装(windows版)可以到redis的github上下载redis最新的发布版,github路径https://github.com/MSOpenTech/redis我的百度网盘中有Redis-x64-3.2.100.msi安装过程和普通软件的安装一样,记住redis的默认端口是6379,也可以在安装的过程中修改">
-<meta property="og:image" content="http://yoursite.com/images/redis.png">
-<meta property="og:updated_time" content="2017-03-12T10:56:58.098Z">
+<meta property="og:description" content="什么是docker?百度之docker的安装(ubuntu)apt-get install docker.io  安装linux自带的dockerapt-get install http://www.docker.com|sh 安装最新的docker
+docker version  查看安装的docker，如果既有client又有server，说明安装启动成功service start/stop/">
+<meta property="og:updated_time" content="2017-04-23T10:45:26.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis使用">
-<meta name="twitter:description" content="redis的下载安装(windows版)可以到redis的github上下载redis最新的发布版,github路径https://github.com/MSOpenTech/redis我的百度网盘中有Redis-x64-3.2.100.msi安装过程和普通软件的安装一样,记住redis的默认端口是6379,也可以在安装的过程中修改">
-<meta name="twitter:image" content="http://yoursite.com/images/redis.png">
+<meta name="twitter:title" content="docker学习笔记">
+<meta name="twitter:description" content="什么是docker?百度之docker的安装(ubuntu)apt-get install docker.io  安装linux自带的dockerapt-get install http://www.docker.com|sh 安装最新的docker
+docker version  查看安装的docker，如果既有client又有server，说明安装启动成功service start/stop/">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/12/redis/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/23/docker学习笔记/"/>
 
 
 
 
 
-  <title> redis使用 | loveabc </title>
+  <title> docker学习笔记 | loveabc </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/redis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/docker学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="loveabc">
@@ -319,7 +320,7 @@
             
             
               
-                redis使用
+                docker学习笔记
               
             
           </h1>
@@ -334,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T11:45:54+08:00">
-                2017-03-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T18:42:53+08:00">
+                2017-04-23
               </time>
             
 
@@ -357,8 +358,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/redis/" itemprop="url" rel="index">
-                    <span itemprop="name">redis</span>
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
                   </a>
                 </span>
 
@@ -392,18 +393,14 @@
       
 
       
-        <h1 id="redis的下载安装-windows版"><a href="#redis的下载安装-windows版" class="headerlink" title="redis的下载安装(windows版)"></a>redis的下载安装(windows版)</h1><p>可以到redis的github上下载redis最新的发布版,github路径<br><a href="https://github.com/MSOpenTech/redis" target="_blank" rel="external">https://github.com/MSOpenTech/redis</a><br><br>我的百度网盘中有Redis-x64-3.2.100.msi<br><br><br>安装过程和普通软件的安装一样,记住redis的默认端口是6379,<br>也可以在安装的过程中修改<br><a id="more"></a></p>
-<h1 id="redis的密码配置"><a href="#redis的密码配置" class="headerlink" title="redis的密码配置"></a>redis的密码配置</h1><p>redis默认是没有密码的,这样会有很大的安全风险，所以需要配置密码，密码的配置<br>也非常简单，在redis的安装目录下找到文件redis.windows-service.conf<br>，搜索requirepass,<br><br><code>#requirepass foobared</code><br><br><br>将注释去掉，就开启了密码验证，密码就是后面的字符串foobared，然后将密码<br>修改成我们自己的即可</p>
-<h1 id="redis服务的开启"><a href="#redis服务的开启" class="headerlink" title="redis服务的开启"></a>redis服务的开启</h1><p>在cmd中进入redis的安装目录，然后执行命令开启redis服务：<br><br><code>redis-server redis.windows.conf</code><br><br>看到下图即成功开启了redis服务<br><br><img src="/images/redis.png" alt="成功开启redis服务"><br><br><br>然后新开一个cmd，进入redis安装目录，执行命令<br><br><br><code>redis-cli -h 127.0.0.1 -p 6379 -a your password</code><br><br>该命令会给出提示<br><br><code>redis 127.0.0.1:6379&gt;</code><br><br>然后输入PING，如果输出PONG，说明连接成功，可对redis进行其他操作</p>
-<h1 id="redis中的数据结构"><a href="#redis中的数据结构" class="headerlink" title="redis中的数据结构"></a>redis中的数据结构</h1><p><br><br>redis是一个key-value内存数据库，所以所有的数据都是以key-value<br>的形式存放在内存(或者磁盘)的</p>
-<h2 id="字符串的存取"><a href="#字符串的存取" class="headerlink" title="字符串的存取"></a>字符串的存取<br></h2><p>set key value //设置key对应的value<br><br><code>set name loveabc</code> 设置name的值为loveabc<br><br>可以使用get命令得到key对应的值<br><br><code>get name</code> 返回值是loveabc<br></p>
-<h2 id="哈希值的存取"><a href="#哈希值的存取" class="headerlink" title="哈希值的存取"></a>哈希值的存取<br></h2><p>一个哈希值可对应多对键值对,可用于存放对象信息<br><br>hmset key field1 value1 [field2 value2…]<br><br>如存放一个有name,password与email的user对象<br><br><code>hmset user name loveabc password loveabcpassword email loveabc@github.com</code><br><br>使用hget key field 获取存储在指定键的哈希字段的值<br><br><code>hget user email</code> 返回loveabc@github.com<br><br>hgetall key 获取key上的所有键值对<br><br><code>hgetall user</code> 返回<br><br>name<br><br>loveabc<br><br>password<br><br>loveabcpassword<br><br>email<br><br>loveabc@github.com</p>
-<h2 id="列表的存取"><a href="#列表的存取" class="headerlink" title="列表的存取"></a>列表的存取</h2><p>lpush key value1 [value2 value3 …]存放多个值到列中<br><br><code>lpush course java redis mysql</code>存放java,redis,mysql到列表course中<br><br>llen key 获取列表的长度<br><br><code>llen course</code> 返回3<br><br>lrange key start end 从列表key中返回第start到第end的内容<br><br><code>lrange course 0 2</code> 返回mysql redis java(从返回结果来看，这更像是栈stack)<br></p>
-<h2 id="无需集合的存取"><a href="#无需集合的存取" class="headerlink" title="无需集合的存取"></a>无需集合的存取<br></h2><p>无序集合里面的数据是无序且不重复的<br><br>sadd key member1 [member2 member2 …] 添加多个元素到无需集合key中<br><br><code>sadd member m1 m2 m1</code> 存放m1,m2到无序集合member中<br><br>smembers key 得到无序集合key中的所有元素<br><br><code>smembers member</code> 返回m1,m2(存放两个m1，单集合里面只有一个)<br></p>
-<h1 id="java使用jedis包操作redis数据库"><a href="#java使用jedis包操作redis数据库" class="headerlink" title="java使用jedis包操作redis数据库"></a>java使用jedis包操作redis数据库</h1><p>首先引入Jedis所在的jar包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">		&lt;groupId&gt;redis.clients&lt;/groupId&gt;</div><div class="line">		&lt;artifactId&gt;jedis&lt;/artifactId&gt;</div><div class="line">		&lt;version&gt;2.9.0&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure></p>
-<p>java代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">package com.imooc.redis;</div><div class="line"></div><div class="line">import java.util.HashMap;</div><div class="line">import java.util.List;</div><div class="line">import java.util.Map;</div><div class="line">import java.util.Map.Entry;</div><div class="line">import java.util.Set;</div><div class="line"></div><div class="line">import org.junit.Test;</div><div class="line"></div><div class="line">import redis.clients.jedis.Jedis;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 使用Jedis对redis数据库进行基本的操作</div><div class="line"> */</div><div class="line">public class RedisHandle &#123;</div><div class="line"></div><div class="line">	@Test</div><div class="line">	public void handleRedis() &#123;</div><div class="line">		Jedis redis = null;</div><div class="line">		try &#123;</div><div class="line">			// 使用ip与port构造Jedis对象</div><div class="line">			redis = new Jedis(&quot;127.0.0.1&quot;, 6379);</div><div class="line">			// 验证密码</div><div class="line">			redis.auth(&quot;foobaredpassword&quot;);</div><div class="line">			//set string</div><div class="line">			redis.set(&quot;email&quot;, &quot;loveabc@github.com&quot;);</div><div class="line">			//set hash</div><div class="line">			Map&lt;String,String&gt; map=new HashMap&lt;String,String&gt;();</div><div class="line">			map.put(&quot;age&quot;, &quot;25&quot;);</div><div class="line">			map.put(&quot;gender&quot;, &quot;man&quot;);</div><div class="line">			redis.hmset(&quot;user&quot;, map);</div><div class="line">			//set list</div><div class="line">			redis.lpush(&quot;course&quot;, &quot;python&quot;);</div><div class="line">			//set set</div><div class="line">			redis.sadd(&quot;member&quot;, &quot;m3&quot;);</div><div class="line">			//get all keys</div><div class="line">			Set&lt;String&gt; keys=redis.keys(&quot;*&quot;);</div><div class="line">			for(String key:keys)&#123;</div><div class="line">			&#125;</div><div class="line">			//get String</div><div class="line">			String name=redis.get(&quot;email&quot;);</div><div class="line">			//get List</div><div class="line">			List&lt;String&gt; courses=redis.lrange(&quot;course&quot;, 0, 5);</div><div class="line">			for(String c:courses)&#123;</div><div class="line">			&#125;</div><div class="line">			//get list length</div><div class="line">			Long sum=redis.llen(&quot;course&quot;);</div><div class="line">			//get hash</div><div class="line">			String password=redis.hget(&quot;user&quot;, &quot;password&quot;);</div><div class="line">			Map&lt;String,String&gt; user=redis.hgetAll(&quot;user&quot;);</div><div class="line">			Set&lt;Entry&lt;String,String&gt;&gt; allMap=user.entrySet();</div><div class="line">			for(Entry&lt;String,String&gt; entry:allMap)&#123;</div><div class="line">			&#125;</div><div class="line">			//get set</div><div class="line">			Set&lt;String&gt; members=redis.smembers(&quot;member&quot;);</div><div class="line">			for(String m:members)&#123;</div><div class="line">			&#125;</div><div class="line">			String type=redis.type(&quot;member&quot;);</div><div class="line">			//get type</div><div class="line">			System.out.println(type);</div><div class="line">		&#125; finally &#123;</div><div class="line">			//关闭连接,释放资源</div><div class="line">			if (redis != null) &#123;</div><div class="line">				redis.close();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>github路径:<a href="https://github.com/loveabc/redis-java.git" target="_blank" rel="external">https://github.com/loveabc/redis-java.git</a></p>
-<p>关于redis更多的操作命令与数据结构，可参考<a href="http://www.yiibai.com/redis/" target="_blank" rel="external">redis入门教程</a></p>
+        <p>什么是docker?百度之<br>docker的安装(ubuntu)<br>apt-get install docker.io  安装linux自带的docker<br>apt-get install <a href="http://www.docker.com|sh" target="_blank" rel="external">http://www.docker.com|sh</a> 安装最新的docker</p>
+<p>docker version  查看安装的docker，如果既有client又有server，说明安装启动成功<br>service start/stop/restart docker  启动/停止/重启docker服务<br>docker pull [options] name [:tag] 从docker远程仓库拉取镜像<br>ex：docker pull hello-world  从docker hub上拉取hello-world镜像<br>docker images [options] [repository] [:tag]  查看本机已经存在的镜像</p>
+<p>docker run [options] images [:tag] [command] [arg]  运行镜像<br>docker ps 查询正在运行的docker镜像<br>-d 后台运行<br>ex：docker run -d nginx  在后台运行nginx服务<br>docker  stop image 停止指定的镜像<br>docker stop 86f</p>
+<p>docker exec [options] imagesID bash 进入容器内部，在容器内部可执行命令<br>ex：docker exec -it 86f67a bash  新开一个终端，进入容器内部，在容器内部可执行命令<br>exit退出容器</p>
+<p>docker网络<br>docker的网络类型有brige（虚拟出自己的网卡），Host（和主机共用网卡），None（没有网络，容器不能和外界有任何网络联系）<br>默认是bridge模式，使用bridge模式，需要端口映射，将主机的端口与镜像的端口进行映射，这样访问主机的指定端口就会访问镜像上的指定端口的服务</p>
+<p>docker  run -d -p  主机端口：容器端口  image<br>ex：docker run -d -p 9999:80  hello-world   将容器的80端口映射到主机的9999端口<br>docker run -d -P iamge  将容器的端口映射到随机端口上<br>ex： docker -d -P hello-world</p>
+<p>根据image id删除镜像<br>docker rmi imageID</p>
+<p>制作自己的镜像：<br>dockerfile：描述怎么制作自己的镜像<br>docker build：执行dockerfile中每一步描述的事情<br>ex：<br>dockerfile文件<br>from hub.c.163.com/library/tomcat       //指定需要继承的镜像<br>MAINTAINER wenqaunzhang youth_fly@163.com    //镜像所有者信息<br>COPY springmvc.war /usr/local/tomcat/webapps        //把需要放到镜像的文件复制到指定路径<br>docker build -t springmvc:0.0.1 .    //创建镜像  -t  镜像的名称和标签    dockerfile文件的路径，当前路径使用  .    </p>
 
       
     </div>
@@ -427,7 +424,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/redis/" rel="tag"># redis</a>
+            <a href="/tags/docker/" rel="tag"># docker</a>
           
         </div>
       
@@ -440,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/12/index/" rel="next" title="hexo使用">
-                <i class="fa fa-chevron-left"></i> hexo使用
+              <a href="/2017/03/16/diandian/" rel="next" title="diandian">
+                <i class="fa fa-chevron-left"></i> diandian
               </a>
             
           </div>
@@ -449,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/13/jvm/" rel="prev" title="HotSpot VM垃圾回收问题">
-                HotSpot VM垃圾回收问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,17 +492,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -571,22 +555,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis的下载安装-windows版"><span class="nav-number">1.</span> <span class="nav-text">redis的下载安装(windows版)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis的密码配置"><span class="nav-number">2.</span> <span class="nav-text">redis的密码配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis服务的开启"><span class="nav-number">3.</span> <span class="nav-text">redis服务的开启</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis中的数据结构"><span class="nav-number">4.</span> <span class="nav-text">redis中的数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的存取"><span class="nav-number">4.1.</span> <span class="nav-text">字符串的存取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈希值的存取"><span class="nav-number">4.2.</span> <span class="nav-text">哈希值的存取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的存取"><span class="nav-number">4.3.</span> <span class="nav-text">列表的存取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无需集合的存取"><span class="nav-number">4.4.</span> <span class="nav-text">无需集合的存取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java使用jedis包操作redis数据库"><span class="nav-number">5.</span> <span class="nav-text">java使用jedis包操作redis数据库</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
