@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[linux常用命令]]></title>
+      <url>%2F2017%2F04%2F30%2Flinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+      <content type="text"><![CDATA[ps -ef 查看当前的服务都有哪些进程 free 查看机器配置 top 查看内存与CPU使用情况 du -h 文件/文件夹 查看文件/文件夹 的大小]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jenkins+maven自动化发布]]></title>
+      <url>%2F2017%2F04%2F30%2Fjenkins-maven%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E5%B8%83%2F</url>
+      <content type="text"><![CDATA[最近一个月负责搭建公司新的开发构建环境，节前最后一天调试完成，节后开始测试，离下班还有一个半小时，忙里偷闲，将这一个月的工作做个总结。背景：公司目前的开发环境是cc+rad，使用ant构建项目，服务器使用websphere，cc和rad都是付费工具，并且已经停止更新，还有一个大缺点是慢，cc的速度逼死手速快的程序员；ant没用过，但是技术负责人说构建需要写脚本，并且越写越长，越来越难维护，决定放弃；websheres也是付费项目，虽然我们是一家金融保险公司，但是也决定拥抱互联网，尽可能多的使用开源项目， jenkins构建历史构建包保存路径{JENKINS_HOME}/jobs/jobname/modules/xx/builds/xx/archive/构建历史保存路径{JENKINS_HOME}/jobs/jobname/builds]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[docker学习笔记]]></title>
       <url>%2F2017%2F04%2F23%2Fdocker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
       <content type="text"><![CDATA[什么是docker?百度之docker的安装(ubuntu)apt-get install docker.io 安装linux自带的dockerapt-get install http://www.docker.com|sh 安装最新的docker docker version 查看安装的docker，如果既有client又有server，说明安装启动成功service start/stop/restart docker 启动/停止/重启docker服务docker pull [options] name [:tag] 从docker远程仓库拉取镜像ex：docker pull hello-world 从docker hub上拉取hello-world镜像docker images [options] [repository] [:tag] 查看本机已经存在的镜像 docker run [options] images [:tag] [command] [arg] 运行镜像docker ps 查询正在运行的docker镜像-d 后台运行ex：docker run -d nginx 在后台运行nginx服务docker stop image 停止指定的镜像docker stop 86f docker exec [options] imagesID bash 进入容器内部，在容器内部可执行命令ex：docker exec -it 86f67a bash 新开一个终端，进入容器内部，在容器内部可执行命令exit退出容器 docker网络docker的网络类型有brige（虚拟出自己的网卡），Host（和主机共用网卡），None（没有网络，容器不能和外界有任何网络联系）默认是bridge模式，使用bridge模式，需要端口映射，将主机的端口与镜像的端口进行映射，这样访问主机的指定端口就会访问镜像上的指定端口的服务 docker run -d -p 主机端口：容器端口 imageex：docker run -d -p 9999:80 hello-world 将容器的80端口映射到主机的9999端口docker run -d -P iamge 将容器的端口映射到随机端口上ex： docker -d -P hello-world 根据image id删除镜像docker rmi imageID 制作自己的镜像：dockerfile：描述怎么制作自己的镜像docker build：执行dockerfile中每一步描述的事情ex：dockerfile文件from hub.c.163.com/library/tomcat //指定需要继承的镜像MAINTAINER wenqaunzhang youth_fly@163.com //镜像所有者信息COPY springmvc.war /usr/local/tomcat/webapps //把需要放到镜像的文件复制到指定路径docker build -t springmvc:0.0.1 . //创建镜像 -t 镜像的名称和标签 dockerfile文件的路径，当前路径使用 .]]></content>
@@ -33,7 +47,7 @@
     <entry>
       <title><![CDATA[hexo使用]]></title>
       <url>%2F2017%2F03%2F12%2Findex%2F</url>
-      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2 如果文章过长，首页全部显示不美观，可以在文章中添加 &lt;!--more--&gt;手工截断文章， 则首页仅显示该标签的上面的内容， 只有点阅读全文，才显示文章全部内容 发布新文章： 1、进入hexo 文件夹,e:/mygit/blog 2、新建文章 hexo new “title” 3、发布文章到本地 hexo clean ,hexo g, hexo server 4、推送最新数据到git hexo d]]></content>
+      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2 如果文章过长，首页全部显示不美观，可以在文章中添加 &lt;!--more--&gt;手工截断文章， 则首页仅显示该标签的上面的内容， 只有点阅读全文，才显示文章全部内容 发布新文章： 1、进入hexo 文件夹,e:/mygit/blog 2、新建文章 hexo new “title” 3、发布文章到本地 hexo clean ,hexo g, hexo server 4、推送最新数据到git hexo d 注:新文章的路径,E:\mygit\blog\source_posts]]></content>
     </entry>
 
     
