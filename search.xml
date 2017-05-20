@@ -47,7 +47,7 @@
     <entry>
       <title><![CDATA[hexo使用]]></title>
       <url>%2F2017%2F03%2F12%2Findex%2F</url>
-      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2 如果文章过长，首页全部显示不美观，可以在文章中添加 &lt;!--more--&gt;手工截断文章， 则首页仅显示该标签的上面的内容， 只有点阅读全文，才显示文章全部内容 发布新文章： 1、进入hexo 文件夹,e:/mygit/blog 2、新建文章 hexo new “title” 3、发布文章到本地 hexo clean ,hexo g, hexo server 4、推送最新数据到git hexo d 注:新文章的路径,E:\mygit\blog\source_posts]]></content>
+      <content type="text"><![CDATA[123456781、为文章添加标签tags: - 标签1 - 标签22、为文章添加分类categories: - 分类1 - 分类2 如果文章过长，首页全部显示不美观，可以在文章中添加 &lt;!--more--&gt;手工截断文章， 则首页仅显示该标签的上面的内容， 只有点阅读全文，才显示文章全部内容 发布新文章： 1、进入hexo 文件夹,e:/mygit/blog 2、新建文章: hexo new “title” 3、发布文章到本地: hexo clean ,hexo g, hexo server 4、推送最新数据到git: hexo d 注:新文章的路径,E:\mygit\blog\source_posts]]></content>
     </entry>
 
     
